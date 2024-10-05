@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Responsive through multiple devices -->
+        <title>Book Reservation Form</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/2460/2460875.png">
+    </head>
+    <body>
+        <header>
+            <h1>Reservation Process</h1>
+        </header>
+
+        <main>
+            <p>Follow the steps below to reserve a book from the Vallejo Public Library:</p>
+
+            <form action="/submit_reservation" method="POST">
+                <!-- Step 1: Search for a Book -->
+                <fieldset>
+                    <legend>Step 1: Search for a Book</legend>
+                    <label for="book_title">Book Title:</label>
+                    <input type="text" id="book_title" name="book_title" required><br><br>
+
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required><br><br>
+
+                    <label for="book_code">Book Code (optional):</label>
+                    <input type="text" id="book_code" name="book_code"><br><br>
+                </fieldset>
+
+                <!-- Step 2: Check Availability -->
+                <fieldset>
+                    <legend>Step 2: Check Availability</legend>
+                    <label for="availability">Is the book available?</label><br>
+                    <input type="radio" id="available_yes" name="availability" value="yes" required>
+                    <label for="available_yes">Yes</label><br>
+
+                    <input type="radio" id="available_no" name="availability" value="no" required>
+                    <label for="available_no">No</label><br><br>
+                </fieldset>
+
+                <!-- Step 3: Place an Order -->
+                <fieldset>
+                    <legend>Step 3: Place an Order</legend>
+                    <p>You have two options:</p>
+
+                    <input type="radio" id="rent" name="order_type" value="rent" required>
+                    <label for="rent">Rent ($5 per week)</label><br>
+
+                    <input type="radio" id="buy" name="order_type" value="buy" required>
+                    <label for="buy">Buy (Full price)</label><br><br>
+                </fieldset>
+
+                <!-- Step 4: Loan Duration (only relevant for renting) -->
+                <fieldset>
+                    <legend>Step 4: Loan Duration</legend>
+                    <label for="loan_duration">Loan Duration (in days):</label>
+                    <input type="number" id="loan_duration" name="loan_duration" min="1" max="28" value="28"><br><br>
+                </fieldset>
+
+                <!-- Step 5: Return the Book -->
+                <fieldset>
+                    <legend>Step 5: Return the Book</legend>
+                    <label for="confirm_return">Will you return the book on time and in good condition?</label><br>
+                    <input type="radio" id="return_yes" name="confirm_return" value="yes" required>
+                    <label for="return_yes">Yes</label><br>
+
+                    <input type="radio" id="return_no" name="confirm_return" value="no" required>
+                    <label for="return_no">No</label><br><br>
+                </fieldset>
+
+                <input type="submit" value="Submit Reservation">
+            </form>
+        </main>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2024 Vallejo Public Library</p>
+        </footer>
+    </body>
+</html>

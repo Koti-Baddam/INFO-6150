@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    height: 80px; /* Smaller size */
+    margin-right: 20px; /* Add spacing between the image and text */
+    border-radius: 50%; /* Makes the image round */
+    order: 1; /* Moves the image to the left */
+}
+
+h1 {
+    color: #2c3e50;
+    order: 2;
+    flex-grow: 1; /* Allows the text to take up the remaining space */
+}
+
+p {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+strong {
+    font-size: 1.2em;
+    color: darkred;
+}
+
+.hobby-img {
+    display: block;
+    max-width: 50%; /* Reduces the size of the mountaineering image */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 20px;
+    margin-left: auto; /* Centers the image horizontally if desired */
+    margin-right: auto;
+}

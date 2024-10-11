@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallejo Public Library - Book Catalogue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hamburger Menu Toggle (for mobile and tablets only) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    <!-- Sidebar Navigation (Visible on mobile/tablets) -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Book Catalogue</a></li>
+            <li><a href="reservation.html">Book Reservation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header>
+            <h1 id="library-title">Vallejo Public Library</h1>
+
+            <!-- Header Icons -->
+            <div class="header-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/11150/11150045.png" alt="Library Card Icon" class="icon"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Login Icon" class="icon"></a>
+            </div>
+
+            <!-- Search Bar -->
+            <form>
+                <input type="text" id="search" name="search" placeholder="Search Books...">
+            </form>
+        </header>
+
+        <!-- Horizontal Navigation Bar -->
+        <nav class="horizontal-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogue.html">Book Catalogue</a></li>
+                <li><a href="reservation.html">Book Reservation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Section for Book Catalogue -->
+        <main class="book-catalogue">
+            <div class="quick-links">
+                <h2>Quick Links / Filters</h2>
+                <ul>
+                    <li><a href="#">Genre</a></li>
+                    <li><a href="#">Topic</a></li>
+                    <li><a href="#">Ratings</a></li>
+                </ul>
+            </div>
+
+            <div class="book-list">
+                <h2>The Inheritance Trilogy by N. K. Jemisin</h2>
+
+                <!-- Book Entry: The Hundred Thousand Kingdoms -->
+                <div class="book-entry">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e3/8a/0d/e38a0d63-d014-0c8b-679d-dd020f22d555/9781549119040.jpg/313x0w.webp" alt="The Hundred Thousand Kingdoms" class="book-image">
+                    <div class="book-details">
+                        <h3>The Hundred Thousand Kingdoms</h3>
+                        <p><strong>Author:</strong> N. K. Jemisin</p>
+                        <p><strong>Available Copies:</strong> 3</p>
+                        <p><strong>Rating:</strong> ★★★★★</p>
+                    </div>
+                </div>
+
+                <!-- Book Entry: The Broken Kingdoms -->
+                <div class="book-entry">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication124/v4/03/96/09/039609cf-ada6-b121-2a2a-3ec89407f807/9780316075985.jpg/313x0w.webp" alt="The Broken Kingdoms" class="book-image">
+                    <div class="book-details">
+                        <h3>The Broken Kingdoms</h3>
+                        <p><strong>Author:</strong> N. K. Jemisin</p>
+                        <p><strong>Available Copies:</strong> 5</p>
+                        <p><strong>Rating:</strong> ★★★★☆</p>
+                    </div>
+                </div>
+
+                <!-- Book Entry: The Kingdom of Gods -->
+                <div class="book-entry">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication124/v4/64/bf/06/64bf0679-5205-1a1f-2509-a8a72d4d9646/9780316076005.jpg/313x0w.webp" alt="The Kingdom of Gods" class="book-image">
+                    <div class="book-details">
+                        <h3>The Kingdom of Gods</h3>
+                        <p><strong>Author:</strong> N. K. Jemisin</p>
+                        <p><strong>Available Copies:</strong> 2</p>
+                        <p><strong>Rating:</strong> ★★★★★</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <hr>
+            <p>&copy; 2024 Vallejo Public Library</p>
+        </footer>
+    </div>
+</body>
+</html>

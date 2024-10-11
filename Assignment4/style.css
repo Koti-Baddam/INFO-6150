@@ -1,0 +1,373 @@
+/* General Body Styling */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #F3F3E2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide the Menu Checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #F3F3E2;
+    position: relative;
+}
+
+/* Header Title */
+#library-title {
+    font-size: 3rem;
+    color: #2B303A;
+    margin: 0;
+}
+
+/* Search Bar */
+form {
+    margin: 15px 0;
+}
+
+form input[type="text"] {
+    width: 60%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #2B303A;
+    margin-bottom: 10px;
+}
+
+/* Horizontal Navigation Bar */
+.horizontal-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #0D1321;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 999;
+    margin-top: 0;
+}
+
+.horizontal-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Header Icons */
+.header-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem; /* Adjusted for more spacing */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.header-icons .icon {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+/* News Section */
+.news {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #8E8358;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* News Text Section */
+.news-text {
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Adds a subtle dark overlay behind the text */
+    padding: 10px 20px; /* Adds padding around the text */
+    border-radius: 8px; /* Adds rounded corners to the background */
+    z-index: 2;
+    opacity: 1;
+    text-align: left; /* Aligns text to the left for better readability */
+    position: absolute; /* Positions text overlay */
+    top: 20px; /* Move text down slightly from the top */
+    left: 20px; /* Move text slightly from the left edge */
+}
+
+/* Text Hover Effect */
+.news-text:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+    color: #FFD700; /* Change text color to gold on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.news-box {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add padding to center the image nicely */
+}
+
+.scroll-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure image fits nicely without stretching */
+    margin: 0 auto; /* Center image horizontally */
+}
+
+/* Adjust padding on mobile */
+@media (max-width: 768px) {
+    .scroll-image {
+        padding: 10px;
+    }
+}
+
+/* Mobile Layout Adjustments */
+@media (max-width: 768px) {
+    #library-title {
+        font-size: 2.5rem;
+        margin-left: 0;
+    }
+
+    header {
+        padding-top: 50px; /* Extra padding to account for repositioning */
+    }
+
+    .header-icons {
+        position: relative;
+        top: 0;
+        justify-content: center; /* Center the icons */
+        margin-top: 15px;
+    }
+
+    .menu-icon {
+        position: relative;
+        top: 0;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    /* Search bar position adjustment */
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    form input[type="text"] {
+        width: 80%;
+    }
+}
+
+/* Sidebar and Hamburger Menu */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: #2B303A;
+}
+
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .horizontal-nav {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ .sidebar {
+        left: 0;
+    }
+
+    .menu-toggle:checked ~ .main-content {
+        transform: translateX(250px);
+    }
+}
+
+/* Sidebar for Mobile/Tablet */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #8E8358;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Info Blocks Section - Side by Side for Web, Stack for Mobile */
+.info-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.info-blocks article {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 1024px) {
+    .info-blocks {
+        flex-direction: column;
+    }
+}
+
+/* Hours Table Styling */
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.hours-table th, .hours-table td {
+    text-align: left;
+    padding: 10px;
+}
+
+.hours-table th {
+    background-color: #2B303A;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hours-table tr:nth-child(even) {
+    background-color: #f3f3e2;
+}
+
+.hours-table tr:nth-child(odd) {
+    background-color: #ecebdb;
+}
+
+/* Hover Effect for Table Rows */
+.hours-table tr:hover {
+    background-color: #d4d2b8; /* Slightly darker on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Contact Details Section */
+.contact-details {
+    font-size: 1rem;
+}
+
+.contact-details h3 {
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.contact-details p strong {
+    color: #2B303A;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0D1321;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Book Catalogue Page Specific */
+.book-catalogue {
+    display: flex;
+}
+
+.quick-links {
+    width: 20%;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.book-list {
+    width: 80%;
+    padding: 20px;
+}
+
+.book-entry {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.book-image {
+    width: 100px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.book-details {
+    flex: 1;
+}
+
+/* Book Reservation Page Specific */
+.book-reservation {
+    padding: 20px;
+}
+
+#reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

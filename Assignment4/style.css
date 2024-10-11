@@ -371,3 +371,49 @@ footer {
     flex-direction: column;
     gap: 15px;
 }
+/* Style for the citation text below each image */
+.citation {
+    font-size: 0.9rem; /* Slightly smaller font */
+    font-style: italic; /* Italic style to distinguish from other text */
+    color: #555; /* A light grey color for less emphasis */
+    margin-top: 5px;
+}
+
+.citation a {
+    text-decoration: underline; /* Make sure the link is underlined */
+    color: #007bff; /* Default blue color for links */
+}
+
+.citation a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Footer Citation Section Styling */
+footer h3 {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+footer ul li a {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+footer ul li a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}

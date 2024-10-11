@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallejo Public Library - Book Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hamburger Menu Toggle (for mobile and tablets only) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    <!-- Sidebar Navigation (Visible on mobile/tablets) -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Book Catalogue</a></li>
+            <li><a href="reservation.html">Book Reservation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header>
+            <h1 id="library-title">Vallejo Public Library</h1>
+
+            <!-- Header Icons -->
+            <div class="header-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/11150/11150045.png" alt="Library Card Icon" class="icon"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Login Icon" class="icon"></a>
+            </div>
+
+            <!-- Search Bar -->
+            <form>
+                <input type="text" id="search" name="search" placeholder="Search for a Book...">
+            </form>
+        </header>
+
+        <!-- Horizontal Navigation Bar -->
+        <nav class="horizontal-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogue.html">Book Catalogue</a></li>
+                <li><a href="reservation.html">Book Reservation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Section for Book Reservation -->
+        <main class="book-reservation">
+            <h2>Book Reservation Process</h2>
+            <p>Search for a book, check availability, and reserve it for 28 days.</p>
+
+            <!-- Reservation Form -->
+            <form id="reservation-form">
+                <label for="book-name">Book Name or Code:</label>
+                <input type="text" id="book-name" name="book-name" required>
+
+                <label for="availability">Check Availability:</label>
+                <input type="button" value="Check Availability" onclick="checkAvailability()">
+
+                <label for="copies">Available Copies:</label>
+                <input type="text" id="copies" name="copies" readonly>
+
+                <label for="reserve-period">Reserve for (days):</label>
+                <input type="number" id="reserve-period" name="reserve-period" value="28" readonly>
+
+                <input type="submit" value="Reserve Book">
+            </form>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <hr>
+            <p>&copy; 2024 Vallejo Public Library</p>
+        </footer>
+    </div>
+
+</body>
+</html>

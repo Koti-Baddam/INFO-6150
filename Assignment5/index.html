@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Register to Receive a Pizza - Grab one! </h1>
+        <form id="pizzaForm" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="3" pattern="[A-Za-z\s]+">
+            <span class="error-message" id="nameError"></span>
+            <label for="birthYear">Year of Birth:</label>
+            <input type="number" id="birthYear" name="birthYear" required min="1901" max="2023">
+            <span class="error-message" id="birthYearError"></span>
+            <label>
+                <input type="checkbox" id="usCheckbox" name="usCheckbox">
+                Do you live in the United States?
+            </label>
+            <div id="zipcodeField" style="display: none;">
+                <label for="zipcode">Zipcode:</label>
+                <input type="text" id="zipcode" name="zipcode" pattern="\\d{5}">
+                <span class="error-message" id="zipcodeError"></span>
+            </div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8">
+            <span class="error-message" id="passwordError"></span>
+            <label>Preferred Type of Pizza:</label>
+            <div class="radio-group">
+            <label><input type="radio" name="pizzaType" value="With pineapple" required> With pineapple</label>
+            <label><input type="radio" name="pizzaType" value="Without pineapple"> Without pineapple</label>
+            <label><input type="radio" name="pizzaType" value="I do not like pizza"> I do not like pizza</label>
+            </div>
+            <span class="error-message" id="pizzaTypeError"></span>
+
+            <button type="submit">Submit</button>
+            <p id="successMessage" style="display: none; color: green;">Accepted</p>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,28 +1,28 @@
-/* General styling */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     background-color: #f4f4f4;
 }
 
 main {
     width: 100%;
     max-width: 400px;
-    padding: 20px;
+    padding: 20px 30px; /* Increased padding for better symmetry */
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #333;
     text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 form {
@@ -33,31 +33,19 @@ form {
 label {
     margin-top: 10px;
     font-weight: bold;
-    color: #333;
 }
 
-input[type="text"], input[type="number"], input[type="password"] {
-    padding: 8px;
+input[type="text"], input[type="number"], input[type="password"], select {
+    padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
-    font-size: 1em;
+    width: 100%; /* Ensure all inputs are aligned */
+    box-sizing: border-box;
 }
 
 input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.radio-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.radio-group label {
-    display: flex;
-    align-items: center;
+    margin-right: 10px;
 }
 
 button {
@@ -67,24 +55,30 @@ button {
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    width: 100%; /* Full-width button */
+    font-size: 1em;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* Styling for error messages */
 .error-message {
     color: red;
-    font-size: 0.85em;
+    font-size: 0.9em;
     margin-top: 5px;
-    margin-bottom: 10px;
 }
 
-/* Success message styling */
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
 #successMessage {
     color: green;
     font-size: 1em;

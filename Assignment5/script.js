@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const birthYear = form.birthYear;
         const birthYearError = document.getElementById("birthYearError");
         const currentYear = new Date().getFullYear();
-        if (birthYear.value < 1901 || birthYear.value > currentYear) {
-            birthYearError.textContent = `Year of birth must be between 1901 and ${currentYear-1}.`;
+        if (birthYear.value < 1901 || birthYear.value > 2023) {
+            birthYearError.textContent = `Year of birth must be between 1901 and 2023.`;
             valid = false;
         } else {
             birthYearError.textContent = "";

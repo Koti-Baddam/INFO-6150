@@ -52,7 +52,7 @@ input[type="text"], input[type="number"], textarea, select {
     font-size: 1em;
     color: #333;
     box-sizing: border-box;
-    background-color: #fafafa; /* Lighter background for inputs */
+    background-color: #fdf5e3; /* Subtle beige for readability */
 }
 
 textarea {
@@ -80,6 +80,11 @@ button {
     transition: background-color 0.2s ease-in-out;
     text-align: center;
     margin-top: 10px; /* Space between buttons */
+}
+
+/* Search Button Specific Styling */
+button.search-button {
+    margin-bottom: 20px; /* Adds space between the search button and results */
 }
 
 button:hover {
@@ -112,6 +117,7 @@ button:hover {
     text-align: left;
     background-color: #fff;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 20px; /* Ensure space between search button and item cards */
 }
 
 /* Responsive Layout */
